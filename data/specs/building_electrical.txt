@@ -1,0 +1,245 @@
+BUILDING ELECTRICAL SYSTEM SPECIFICATIONS
+Project: Smart Building Complex
+Document Number: ELEC-SPEC-2024-001
+Revision: 1.0
+Date: January 2024
+
+1. GENERAL REQUIREMENTS
+
+1.1 SCOPE
+This specification covers the complete electrical system for the smart building complex, including power distribution, lighting, controls, and emergency systems.
+
+1.2 CODES AND STANDARDS
+- National Electrical Code (NEC) 2023
+- IEEE Standards for Electrical Systems
+- Local Building Codes and Ordinances
+- Energy Code Requirements
+- Accessibility Standards (ADA)
+
+1.3 DESIGN CRITERIA
+- Building Type: Commercial Office/Research Facility
+- Total Square Footage: 150,000 sq ft
+- Occupancy: 500+ people
+- Operating Hours: 24/7 with varying occupancy
+- Energy Efficiency Target: 30% below ASHRAE 90.1 baseline
+
+2. POWER DISTRIBUTION SYSTEM
+
+2.1 SERVICE ENTRANCE
+- Service Voltage: 480V/3-phase, 4-wire
+- Service Capacity: 2000A main service
+- Service Type: Underground service lateral
+- Utility Company: Local Power Authority
+- Metering: Smart meter with demand monitoring
+
+2.2 MAIN ELECTRICAL ROOM
+- Location: Basement level, centrally located
+- Size: 20' x 30' with adequate clearance
+- Access: Double doors, minimum 3'6" width
+- Ventilation: Mechanical ventilation with temperature control
+- Lighting: Emergency lighting with battery backup
+
+2.3 MAIN DISTRIBUTION PANELS
+- Main Switchboard: 2000A, 480V/3-phase
+- Distribution Panels: Multiple 400A and 200A panels
+- Panel Types: NEMA 1 indoor, NEMA 3R outdoor
+- Circuit Breakers: Electronic trip units with communication
+- Ground Fault Protection: Class A GFCI on all branch circuits
+
+2.4 SUBDISTRIBUTION
+- Floor Distribution: 200A panels per floor
+- Department Panels: 100A panels for major departments
+- Equipment Panels: Dedicated panels for HVAC, lighting, etc.
+- Emergency Panels: Separate emergency power distribution
+
+3. EMERGENCY POWER SYSTEM
+
+3.1 GENERATOR SYSTEM
+- Type: Diesel-fueled, liquid-cooled
+- Capacity: 500kW continuous, 600kW standby
+- Fuel Storage: 1000-gallon above-ground tank
+- Runtime: 72 hours at full load
+- Starting: Automatic with manual override
+- Transfer Switches: Automatic transfer switches (ATS)
+
+3.2 UPS SYSTEMS
+- Type: Online double-conversion UPS
+- Capacity: 100kW total capacity
+- Runtime: 15 minutes at full load
+- Battery Type: Valve-regulated lead-acid (VRLA)
+- Monitoring: Network monitoring with SNMP
+- Maintenance: Hot-swappable modules
+
+3.3 CRITICAL LOADS
+- Life Safety Systems
+- Emergency Lighting
+- Fire Alarm System
+- Security Systems
+- Data Center Equipment
+- Medical Equipment (if applicable)
+
+4. LIGHTING SYSTEM
+
+4.1 GENERAL LIGHTING
+- Fixture Type: LED with integrated controls
+- Efficiency: Minimum 120 lumens per watt
+- Color Temperature: 3000K-4000K adjustable
+- Dimming: 0-100% dimming capability
+- Controls: Occupancy sensors, daylight harvesting
+
+4.2 EMERGENCY LIGHTING
+- Type: LED emergency fixtures
+- Runtime: 90 minutes minimum
+- Testing: Monthly testing with automatic reporting
+- Battery Type: Lithium-ion with 10-year life
+- Coverage: All exit paths and critical areas
+
+4.3 EXTERIOR LIGHTING
+- Type: LED fixtures with photocell control
+- Efficiency: Minimum 100 lumens per watt
+- Controls: Astronomical time clock with motion sensors
+- Security: High-output fixtures for parking areas
+- Maintenance: Accessible fixtures with easy lamp replacement
+
+5. CONTROL AND AUTOMATION
+
+5.1 BUILDING MANAGEMENT SYSTEM (BMS)
+- Platform: Open protocol (BACnet, Modbus)
+- Integration: HVAC, lighting, electrical, security
+- User Interface: Web-based with mobile access
+- Alarms: Email and SMS notifications
+- Reporting: Automated reports and analytics
+
+5.2 LIGHTING CONTROLS
+- System Type: Digital addressable lighting interface (DALI)
+- Sensors: Occupancy, vacancy, daylight, time
+- Scheduling: Time-based scheduling with override
+- Integration: BMS and security system integration
+- Energy Management: Demand response capability
+
+5.3 ELECTRICAL MONITORING
+- Power Quality: Continuous monitoring and recording
+- Energy Consumption: Real-time monitoring and trending
+- Demand Management: Peak demand monitoring and control
+- Power Factor: Automatic correction with capacitor banks
+- Harmonics: THD monitoring and analysis
+
+6. COMMUNICATION SYSTEMS
+
+6.1 STRUCTURED CABLING
+- Category: Cat6A for data, Cat6 for voice
+- Backbone: Fiber optic backbone (single-mode and multi-mode)
+- Wireless: Wi-Fi 6 access points throughout building
+- Cellular: Distributed antenna system (DAS)
+- Emergency: Two-way radio system for maintenance
+
+6.2 NETWORK INFRASTRUCTURE
+- Switches: Managed switches with PoE capability
+- Routers: Enterprise-grade routers with redundancy
+- Security: Firewalls, intrusion detection, VPN access
+- Monitoring: Network monitoring and alerting
+- Backup: Redundant internet connections
+
+7. SAFETY AND SECURITY
+
+7.1 FIRE ALARM SYSTEM
+- Type: Addressable fire alarm system
+- Detection: Smoke, heat, and manual pull stations
+- Notification: Audible and visual alarms
+- Integration: HVAC shutdown, elevator recall
+- Monitoring: 24/7 central station monitoring
+
+7.2 SECURITY SYSTEM
+- Access Control: Card readers and biometric systems
+- Video Surveillance: IP cameras with recording
+- Intrusion Detection: Motion sensors and door contacts
+- Integration: BMS and lighting system integration
+- Monitoring: 24/7 security monitoring center
+
+7.3 GROUNDING AND BONDING
+- Grounding: Multiple ground rods with testing
+- Bonding: Equipment bonding and grounding
+- Lightning Protection: Lightning rods and surge protection
+- Testing: Annual ground resistance testing
+- Documentation: Complete grounding system documentation
+
+8. ENERGY EFFICIENCY FEATURES
+
+8.1 DEMAND RESPONSE
+- Participation: Utility demand response programs
+- Load Shedding: Automatic load reduction capability
+- Monitoring: Real-time demand monitoring
+- Reporting: Demand response event reporting
+- Optimization: Load shifting and optimization
+
+8.2 RENEWABLE ENERGY
+- Solar Panels: 100kW rooftop solar installation
+- Integration: Grid-tied with battery backup
+- Monitoring: Solar production monitoring
+- Maintenance: Annual inspection and cleaning
+- Performance: Performance guarantees and warranties
+
+8.3 ENERGY STORAGE
+- Type: Lithium-ion battery energy storage
+- Capacity: 200kWh usable capacity
+- Applications: Peak shaving, demand response
+- Integration: BMS and electrical system integration
+- Monitoring: Real-time monitoring and control
+
+9. TESTING AND COMMISSIONING
+
+9.1 ELECTRICAL TESTING
+- Insulation Testing: All circuits and equipment
+- Load Testing: Generator and UPS systems
+- Coordination Studies: Circuit breaker coordination
+- Power Quality: Harmonics and power factor testing
+- Documentation: Complete testing documentation
+
+9.2 SYSTEM COMMISSIONING
+- Functional Testing: All systems and equipment
+- Performance Testing: Efficiency and performance verification
+- Training: Operations and maintenance training
+- Documentation: Operations and maintenance manuals
+- Warranty: Equipment and system warranties
+
+10. MAINTENANCE AND OPERATIONS
+
+10.1 PREVENTIVE MAINTENANCE
+- Schedule: Monthly, quarterly, and annual maintenance
+- Procedures: Detailed maintenance procedures
+- Documentation: Maintenance logs and records
+- Spare Parts: Critical spare parts inventory
+- Training: Ongoing training for maintenance staff
+
+10.2 MONITORING AND ALERTING
+- 24/7 Monitoring: Continuous system monitoring
+- Alerts: Immediate notification of system issues
+- Reporting: Daily, weekly, and monthly reports
+- Trending: Long-term performance trending
+- Optimization: Continuous system optimization
+
+11. DOCUMENTATION REQUIREMENTS
+
+11.1 AS-BUILT DRAWINGS
+- Single-line diagrams
+- Panel schedules
+- Equipment layouts
+- Conduit and cable routing
+- Grounding and bonding details
+
+11.2 OPERATIONS MANUALS
+- Equipment operation procedures
+- Maintenance procedures
+- Troubleshooting guides
+- Emergency procedures
+- Contact information
+
+11.3 TRAINING MATERIALS
+- System overview presentations
+- Hands-on training procedures
+- Video tutorials
+- Reference guides
+- Certification requirements
+
+This specification shall be used as the basis for design, construction, and operation of the electrical system. Any deviations must be approved in writing by the project engineer.
+

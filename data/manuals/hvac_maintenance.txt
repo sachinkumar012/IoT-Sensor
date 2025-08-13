@@ -1,0 +1,168 @@
+HVAC System Maintenance Manual
+Version 2.1
+Last Updated: 2024
+
+TABLE OF CONTENTS
+1. System Overview
+2. Preventive Maintenance Schedule
+3. Troubleshooting Guide
+4. Emergency Procedures
+5. Parts and Specifications
+
+1. SYSTEM OVERVIEW
+The HVAC system consists of:
+- 2 main air handling units (AHU-1 and AHU-2)
+- 4 rooftop units (RTU-1 through RTU-4)
+- Variable air volume (VAV) boxes throughout the building
+- Energy recovery ventilators (ERV-1 and ERV-2)
+- Chilled water system with 2 chillers
+- Hot water system with 2 boilers
+
+2. PREVENTIVE MAINTENANCE SCHEDULE
+
+DAILY CHECKS:
+- Monitor system performance via BMS
+- Check for unusual noises or vibrations
+- Verify temperature and humidity readings
+- Check filter pressure differentials
+
+WEEKLY CHECKS:
+- Inspect air filters for cleanliness
+- Check belt tension on motors
+- Verify damper positions
+- Clean condensate drain pans
+
+MONTHLY CHECKS:
+- Lubricate motor bearings
+- Check refrigerant levels
+- Inspect electrical connections
+- Calibrate temperature sensors
+
+QUARTERLY CHECKS:
+- Clean evaporator and condenser coils
+- Replace air filters
+- Check and adjust belt tension
+- Inspect ductwork for leaks
+
+ANNUAL CHECKS:
+- Comprehensive system inspection
+- Calibrate all sensors and controls
+- Test emergency systems
+- Performance testing and optimization
+
+3. TROUBLESHOOTING GUIDE
+
+HIGH ENERGY CONSUMPTION:
+Symptoms: Unusually high utility bills, system running continuously
+Causes: Dirty filters, refrigerant leaks, improper setpoints
+Solutions: Replace filters, repair leaks, optimize setpoints
+
+POOR AIR QUALITY:
+Symptoms: Complaints about stuffy air, odors, dust
+Causes: Dirty filters, poor ventilation, contaminated ducts
+Solutions: Replace filters, increase ventilation, clean ducts
+
+UNEVEN TEMPERATURE DISTRIBUTION:
+Symptoms: Hot and cold spots throughout building
+Causes: Damper malfunctions, duct leaks, improper balancing
+Solutions: Repair dampers, seal duct leaks, rebalance system
+
+SYSTEM NOISE:
+Symptoms: Unusual sounds from equipment
+Causes: Loose belts, worn bearings, unbalanced fans
+Solutions: Tighten belts, replace bearings, balance fans
+
+4. EMERGENCY PROCEDURES
+
+SYSTEM FAILURE:
+1. Check emergency power status
+2. Verify critical loads are served
+3. Contact maintenance team immediately
+4. Implement manual override if necessary
+5. Document incident for analysis
+
+FIRE ALARM INTEGRATION:
+1. HVAC system automatically shuts down
+2. Smoke dampers close automatically
+3. Emergency ventilation activates
+4. System remains off until alarm clears
+5. Manual restart required after clearance
+
+5. PARTS AND SPECIFICATIONS
+
+AIR FILTERS:
+- Type: MERV 13 pleated filters
+- Size: 20" x 20" x 2"
+- Replacement: Every 3 months or when pressure differential exceeds 0.5" w.c.
+
+BELTS:
+- Type: A-section V-belts
+- Size: Various lengths as required
+- Replacement: When cracks or wear detected
+
+REFRIGERANT:
+- Type: R-410A
+- Charge: 85 lbs per chiller
+- Leak detection: Annual inspection required
+
+MOTORS:
+- Type: Premium efficiency IE3
+- Bearings: Sealed ball bearings
+- Lubrication: Annual greasing required
+
+6. PERFORMANCE METRICS
+
+EFFICIENCY TARGETS:
+- Overall system efficiency: >85%
+- Energy consumption: <0.8 kWh/sqft/year
+- Temperature control: ±1°F setpoint
+- Humidity control: ±5% setpoint
+
+MONITORING PARAMETERS:
+- Supply air temperature
+- Return air temperature
+- Mixed air temperature
+- Outside air temperature
+- Relative humidity levels
+- Static pressure readings
+- Power consumption
+- Runtime hours
+
+7. SAFETY CONSIDERATIONS
+
+LOCKOUT/TAGOUT:
+- Always follow LOTO procedures
+- Verify power is disconnected
+- Use appropriate PPE
+- Work with a partner when possible
+
+CHEMICAL SAFETY:
+- Wear gloves when handling refrigerants
+- Use proper ventilation for cleaning chemicals
+- Follow MSDS guidelines
+- Dispose of chemicals properly
+
+ELECTRICAL SAFETY:
+- Verify power is off before working
+- Use insulated tools
+- Check for proper grounding
+- Follow electrical codes
+
+8. DOCUMENTATION REQUIREMENTS
+
+MAINTENANCE RECORDS:
+- Date and time of service
+- Technician name and ID
+- Work performed
+- Parts replaced
+- Test results
+- Next service due date
+
+PERFORMANCE LOGS:
+- Daily operational data
+- Monthly efficiency reports
+- Quarterly performance analysis
+- Annual system evaluation
+
+This manual should be reviewed annually and updated as needed. All maintenance personnel must be familiar with these procedures before performing work on the HVAC system.
+

@@ -1,0 +1,307 @@
+# IoT Sensor Data RAG System Configuration
+# Configuration file for the Smart Building IoT Sensor Data RAG system
+
+# System Configuration
+system:
+  name: "IoT Sensor Data RAG for Smart Buildings"
+  version: "1.0.0"
+  environment: "development"  # development, staging, production
+  debug: true
+  log_level: "INFO"
+
+# RAG System Configuration
+rag:
+  engine:
+    model: "all-MiniLM-L6-v2"  # Sentence transformer model
+    chunk_size: 512
+    chunk_overlap: 50
+    max_results: 10
+    similarity_threshold: 0.7
+  
+  vector_database:
+    type: "chromadb"
+    persist_directory: "./data/chroma_db"
+    collection_names:
+      - "maintenance_manuals"
+      - "building_specs"
+  
+  document_processing:
+    supported_formats: ["txt", "pdf", "docx", "md"]
+    max_file_size: "10MB"
+    text_extraction: true
+
+# IoT Data Configuration
+iot:
+  data_collection:
+    simulation_interval: 5.0  # seconds
+    max_buffer_size: 10000
+    data_retention_days: 30
+  
+  sensors:
+    temperature:
+      id: "temp_001"
+      type: "temperature"
+      location: "HVAC_room"
+      unit: "celsius"
+      base_value: 22.0
+      variance: 3.0
+      trend: 0.01
+      thresholds:
+        min: 18
+        max: 28
+        warning_low: 20
+        warning_high: 26
+    
+    humidity:
+      id: "hum_001"
+      type: "humidity"
+      location: "HVAC_room"
+      unit: "percentage"
+      base_value: 45.0
+      variance: 5.0
+      trend: 0.005
+      thresholds:
+        min: 30
+        max: 70
+        warning_low: 35
+        warning_high: 65
+    
+    pressure:
+      id: "press_001"
+      type: "pressure"
+      location: "HVAC_room"
+      unit: "kPa"
+      base_value: 101.3
+      variance: 0.5
+      trend: 0.0
+      thresholds:
+        min: 100
+        max: 103
+        warning_low: 100.5
+        warning_high: 102.5
+    
+    energy:
+      id: "energy_001"
+      type: "energy"
+      location: "main_panel"
+      unit: "kWh"
+      base_value: 15.0
+      variance: 2.0
+      trend: 0.02
+      thresholds:
+        min: 5
+        max: 30
+        warning_low: 8
+        warning_high: 25
+    
+    air_quality:
+      id: "air_001"
+      type: "air_quality"
+      location: "office_area"
+      unit: "ppm"
+      base_value: 400.0
+      variance: 50.0
+      trend: 0.1
+      thresholds:
+        min: 300
+        max: 800
+        warning_low: 350
+        warning_high: 600
+
+# Machine Learning Configuration
+ml:
+  models:
+    predictive_maintenance:
+      type: "RandomForest"
+      n_estimators: 100
+      random_state: 42
+      min_samples_split: 2
+      min_samples_leaf: 1
+    
+    anomaly_detection:
+      type: "IsolationForest"
+      contamination: 0.1
+      random_state: 42
+      n_estimators: 100
+    
+    energy_optimization:
+      type: "LinearRegression"
+      fit_intercept: true
+      normalize: false
+  
+  training:
+    min_samples: 50
+    validation_split: 0.2
+    test_split: 0.1
+    cross_validation_folds: 5
+  
+  features:
+    time_features: true
+    lag_features: true
+    rolling_statistics: true
+    interaction_features: true
+    lag_windows: [1, 2, 3]
+    rolling_windows: [5, 10, 20]
+
+# Data Storage Configuration
+storage:
+  database:
+    type: "mongodb"  # or "sqlite", "postgresql"
+    host: "localhost"
+    port: 27017
+    database: "iot_sensor_rag"
+    username: ""
+    password: ""
+    connection_string: ""
+  
+  file_storage:
+    base_path: "./data"
+    sensors: "./data/sensors"
+    manuals: "./data/manuals"
+    specs: "./data/specs"
+    models: "./models"
+    logs: "./logs"
+  
+  backup:
+    enabled: true
+    frequency: "daily"
+    retention_days: 30
+    compression: true
+
+# API Configuration
+api:
+  enabled: true
+  host: "0.0.0.0"
+  port: 8000
+  workers: 4
+  timeout: 30
+  rate_limit: 100  # requests per minute
+  
+  authentication:
+    enabled: false
+    type: "jwt"  # or "oauth", "api_key"
+    secret_key: ""
+    token_expiry: 3600  # seconds
+
+# Web Interface Configuration
+web:
+  streamlit:
+    port: 8501
+    host: "localhost"
+    theme: "light"
+    page_title: "IoT Sensor Data RAG"
+    page_icon: "🏗️"
+    layout: "wide"
+    initial_sidebar_state: "expanded"
+  
+  dashboard:
+    refresh_interval: 5  # seconds
+    max_data_points: 1000
+    chart_height: 500
+    enable_real_time: true
+
+# Monitoring and Logging
+monitoring:
+  metrics:
+    enabled: true
+    collection_interval: 60  # seconds
+    retention_days: 90
+  
+  alerts:
+    enabled: true
+    email:
+      smtp_server: ""
+      smtp_port: 587
+      username: ""
+      password: ""
+      recipients: []
+    
+    slack:
+      webhook_url: ""
+      channel: "#alerts"
+    
+    thresholds:
+      cpu_usage: 80
+      memory_usage: 80
+      disk_usage: 90
+      response_time: 5  # seconds
+
+# Security Configuration
+security:
+  encryption:
+    enabled: false
+    algorithm: "AES-256"
+    key_file: "./keys/encryption.key"
+  
+  ssl:
+    enabled: false
+    certificate_file: ""
+    private_key_file: ""
+  
+  access_control:
+    enabled: false
+    allowed_ips: []
+    allowed_domains: []
+
+# Performance Configuration
+performance:
+  caching:
+    enabled: true
+    type: "memory"  # or "redis"
+    ttl: 3600  # seconds
+    max_size: 1000
+  
+  optimization:
+    parallel_processing: true
+    max_workers: 4
+    batch_size: 100
+  
+  memory:
+    max_usage: "2GB"
+    cleanup_interval: 300  # seconds
+
+# Integration Configuration
+integrations:
+  mqtt:
+    enabled: false
+    broker: "localhost"
+    port: 1883
+    username: ""
+    password: ""
+    topics:
+      - "sensors/+/data"
+      - "sensors/+/status"
+  
+  external_apis:
+    weather:
+      enabled: false
+      api_key: ""
+      base_url: "https://api.openweathermap.org/data/2.5"
+    
+    energy_utility:
+      enabled: false
+      api_key: ""
+      base_url: ""
+  
+  databases:
+    external:
+      enabled: false
+      type: ""
+      connection_string: ""
+
+# Development Configuration
+development:
+  testing:
+    enabled: true
+    test_data_size: 1000
+    mock_sensors: true
+    mock_documents: true
+  
+  debugging:
+    verbose_logging: true
+    performance_profiling: false
+    memory_profiling: false
+  
+  hot_reload: true
+  auto_restart: true
+
