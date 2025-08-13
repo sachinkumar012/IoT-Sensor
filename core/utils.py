@@ -1,10 +1,10 @@
-import yaml
+import yaml # type: ignore
 import os
 import json
 import logging
 from typing import Dict, Any, Optional
 from pathlib import Path
-import pandas as pd
+import pandas as pd # type: ignore
 from datetime import datetime, timedelta
 
 # Configure logging
@@ -439,7 +439,7 @@ def get_system_info() -> Dict[str, Any]:
         Dictionary of system information
     """
     import platform
-    import psutil
+    import psutil # type: ignore
     
     try:
         system_info = {
@@ -478,6 +478,8 @@ def setup_logging(log_level: str = "INFO", log_file: str = "logs/app.log") -> No
     )
     
     logger.info(f"Logging configured: level={log_level}, file={log_file}")
+
+
 
 
 
