@@ -82,7 +82,7 @@ def setup_environment():
     
     print("✅ Environment setup complete")
 
-def launch_streamlit():
+def launch_streamlit(port, host):
     """Launch the Streamlit application for Render deployment"""
     print("🚀 Launching Streamlit application...")
 
@@ -91,17 +91,17 @@ def launch_streamlit():
         print(f"❌ Application file not found: {app_path}")
         return False
 
-    # Render provides the port via $PORT
-    port = os.environ.get("PORT", "8501")
+    # Use the provided port and host, or environment variable for Render
+    port = str(port) if port else os.environ.get("PORT", "8501")
+    host = host if host else "0.0.0.0"
 
     cmd = [
         "streamlit", "run", str(app_path),
         "--server.port", port,
-        "--server.address", "0.0.0.0",
+        "--server.address", host,
         "--server.headless", "true"
     ]
 
-    # Use exec so it replaces the current process (important for Render)
     os.execvp(cmd[0], cmd)
 
 
