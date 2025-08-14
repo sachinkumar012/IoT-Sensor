@@ -5,6 +5,12 @@ IoT Sensor Data RAG System - Application Launcher
 This script launches the Streamlit application for the IoT Sensor Data RAG system.
 It handles setup, configuration, and launching the web interface.
 """
+import warnings
+warnings.filterwarnings("ignore", category=SyntaxWarning)
+
+import logging
+logging.getLogger("torch").setLevel(logging.ERROR)
+
 
 import os
 import sys
