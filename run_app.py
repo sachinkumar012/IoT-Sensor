@@ -82,42 +82,28 @@ def setup_environment():
     
     print("✅ Environment setup complete")
 
-def launch_streamlit(port=8501, host="localhost"):
-    """Launch the Streamlit application"""
-    print(f"🚀 Launching Streamlit application on {host}:{port}")
-    print("📱 The application will open in your default web browser")
-    print("⏹️  Press Ctrl+C to stop the application")
-    print("-" * 50)
-    
-    # Get the path to the main application
+def launch_streamlit():
+    """Launch the Streamlit application for Render deployment"""
+    print("🚀 Launching Streamlit application...")
+
     app_path = Path("app/main.py")
-    
     if not app_path.exists():
         print(f"❌ Application file not found: {app_path}")
-        print("Please ensure the application files are in the correct location")
         return False
-    
-    try:
-        # Launch Streamlit
-        cmd = [
-            sys.executable, "-m", "streamlit", "run", str(app_path),
-            "--server.port", str(port),
-            "--server.address", host,
-            "--server.headless", "false"
-        ]
-        
-        subprocess.run(cmd, check=True)
-        return True
-        
-    except subprocess.CalledProcessError as e:
-        print(f"❌ Error launching Streamlit: {e}")
-        return False
-    except KeyboardInterrupt:
-        print("\n⏹️  Application stopped by user")
-        return True
-    except Exception as e:
-        print(f"❌ Unexpected error: {e}")
-        return False
+
+    # Render provides the port via $PORT
+    port = os.environ.get("PORT", "8501")
+
+    cmd = [
+        "streamlit", "run", str(app_path),
+        "--server.port", port,
+        "--server.address", "0.0.0.0",
+        "--server.headless", "true"
+    ]
+
+    # Use exec so it replaces the current process (important for Render)
+    os.execvp(cmd[0], cmd)
+
 
 def run_tests():
     """Run the test suite"""
@@ -219,4 +205,4 @@ Examples:
         sys.exit(1)
 
 if __name__ == "__main__":
-    main()  # Or your Streamlit UI code
+    main()
