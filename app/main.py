@@ -12,7 +12,7 @@ try:
     import os
     import numpy as np # type: ignore
 except Exception as e:
-    import streamlit as st
+    import streamlit as st # type: ignore
     st.error(f"Startup import error: {e}")
     st.stop()
 
