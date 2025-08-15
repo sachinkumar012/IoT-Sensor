@@ -57,7 +57,6 @@ st.markdown("""
     .alert-warning {
         background-color: #fff3cd;
         border: 1px solid #ffeaa7;
-        border-radius: 0.5rem;
         padding: 1rem;
         margin: 1rem 0;
     }
