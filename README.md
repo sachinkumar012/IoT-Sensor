@@ -90,7 +90,7 @@ IoT Sensor/
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/sachinkumar012/IoT-Sensor
 cd IoT-Sensor
 ```
 
@@ -174,7 +174,7 @@ sensors:
 - **Predictive Accuracy**: MAE, RMSE for maintenance predictions
 
 ## 🚀 Deployment
-
+https://iot-sensor-0o9l.onrender.com/
 ### Local Development
 ```bash
 streamlit run app/main.py
@@ -218,4 +218,5 @@ For questions and support:
 
 ---
 
-**Built with ❤️ for Smart Building Innovation**
+
+
