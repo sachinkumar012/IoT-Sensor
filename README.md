@@ -215,8 +215,11 @@ For questions and support:
 - Create an issue on GitHub
 - Contact the development team
 - Check the documentation in the `docs/` folder
+Author: sachinyadav887780@gmail.com 
+
 
 ---
+
 
 
 
